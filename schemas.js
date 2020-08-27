@@ -2,6 +2,7 @@ import {ObjectId} from 'bson';
 
 class Medium {
   constructor({
+    title,
     link,
     partition,
     archived = Medium.ARCHIVED_FALSE,
@@ -9,6 +10,7 @@ class Medium {
   }) {
     this._partition = partition;
     this._id = id;
+    this.title = title;
     this.link = link;
     this.archived = archived;
   }
@@ -21,6 +23,7 @@ class Medium {
     properties: {
       _id: 'objectId',
       _partition: 'string?',
+      title: 'string',
       link: 'string',
       archived: 'bool',
       type: 'string',

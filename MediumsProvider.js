@@ -100,7 +100,7 @@ const MediumsProvider = ({children, userId}) => {
 
   // Define our create, update, and delete functions that users of the
   // useTasks() hook can call.
-  const createMedium = (newMediumLink) => {
+  const createMedium = (newMediumTitle, newMediumLink) => {
     const realm = realmRef.current;
 
     // Open a write transaction.
@@ -113,7 +113,7 @@ const MediumsProvider = ({children, userId}) => {
 
         'Medium',
 
-        new Medium({link: newMediumLink || 'New Medium', partition: userId}),
+        new Medium({title: newMediumTitle  || 'New Medium', link: newMediumLink, partition: userId}),
 
       );
 
