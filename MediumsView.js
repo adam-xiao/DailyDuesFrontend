@@ -22,17 +22,17 @@ export function MediumsView() {
       <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
         <Button type="outline" title="Log Out" onPress={logOut} />
 
-        <AddMediumView />
+        {/* <AddMediumView /> */}
 
       </View>
-      <Text h2>{userId}</Text>
-      <ScrollView>
+      {/* <Text h2>{userId}</Text> */}
+      {/* <ScrollView>
         {mediums.map(medium => (
 
           <MediumItem key={`${medium._id}`} medium={medium} />
 
         ))}
-      </ScrollView>
+      </ScrollView> */}
     </>
   );
 }
