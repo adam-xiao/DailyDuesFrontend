@@ -28,7 +28,6 @@ export function AddMediumView() {
           <Input
             placeholder="New Medium Link"
             onChangeText={(text) => setNewMediumLink(text)}
-            autoFocus={true}
           />
           <Button
             title="Create"

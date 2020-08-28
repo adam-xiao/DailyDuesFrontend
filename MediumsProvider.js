@@ -69,16 +69,16 @@ const MediumsProvider = ({children, userId}) => {
         // Read the collection of all Tasks in the realm. Again, thanks to our
         // configuration above, the realm only contains tasks where
         // task._partition == projectId.
-        const syncTasks = openedRealm.objects('Medium');
+        const syncMediums = openedRealm.objects('Medium');
 
         // Watch for changes to the tasks collection.
         openedRealm.addListener('change', () => {
           // On change, update the tasks state variable and re-render.
-          setMediums([...syncTasks]);
+          setMediums([...syncMediums]);
         });
 
         // Set the tasks state variable and re-render.
-        setMediums([...syncTasks]);
+        setMediums([...syncMediums]);
       })
       .catch((error) => console.warn('Failed to open realm:', error));
 
