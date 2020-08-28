@@ -149,7 +149,7 @@ function AppBody() {
             <LogInView />
           ) : (
 
-            <MediumsProvider userId="My Mediums">
+            <MediumsProvider userId={user.id}>
 
               <MediumsView />
 
