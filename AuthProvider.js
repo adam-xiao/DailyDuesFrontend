@@ -63,6 +63,6 @@ const useAuth = () => {
       throw new Error('useAuth() called outside of a AuthProvider?');
     }
     return auth;
-  };
+};
   
 export {AuthProvider, useAuth};

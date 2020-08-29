@@ -1,6 +1,8 @@
 package com.dailydues;
 
+
 import com.facebook.react.ReactActivity;
+import io.realm.Realm;
 
 public class MainActivity extends ReactActivity {
 
