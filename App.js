@@ -1,49 +1,21 @@
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {SafeAreaView, View, StatusBar} from 'react-native';
-// import {Button} from 'react-native-elements';
-import {useAuth} from './AuthProvider';
-import {LogInView} from './LogInView';
-import {AuthProvider} from './AuthProvider';
-import {MediumsProvider} from './MediumsProvider';
-import {MediumsView} from './MediumsView';
+import { StyleSheet, Text, View } from 'react-native';
 
-const App = () => {
+export default function App() {
   return (
-
-    <AuthProvider>
-
-      <AppBody />
-
-    </AuthProvider>
-
-  );
-};
-
-// The AppBody is the main view within the App. If a user is not logged in, it
-// renders the login view. Otherwise, it renders the tasks view. It must be
-// within an AuthProvider.
-function AppBody() {
-  const {user} = useAuth();
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <View>
-          {user == null ? (
-            <LogInView />
-          ) : (
-
-            <MediumsProvider userId={user.id}>
-
-              <MediumsView />
-
-            </MediumsProvider>
-
-          )}
-        </View>
-      </SafeAreaView>
-    </>
+    <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
   );
 }
 
-export default App;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
