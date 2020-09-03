@@ -7,7 +7,14 @@ export default class App extends Component {
   state={
     currentUser: { username: "", id: null },
     media: [],
-    authMode: true
+    authMode: true,
+    user: "",
+    password: ""
+  }
+
+  handleOnChange = (event) => {
+    const { target: { name, value } } = event
+    this.setState({ [name]: value })
   }
 
 
@@ -49,6 +56,7 @@ export default class App extends Component {
 
   render(){
 
+    
     const styles = StyleSheet.create({
       container: {
         flex: 1,
@@ -62,14 +70,17 @@ export default class App extends Component {
       <View style={styles.container}>
         <Text>Daily Dues!</Text>
         <TextInput
-          autoCapitalize="none"
+          name="user"
+          value={this.state.user}
           placeholder="Username"
-          // onChangeText={}
+          onChange={this.handleOnChange}
         />
         <TextInput
+          name="password"
+          value={this.state.password}
           secureTextEntry={true}
           placeholder="Password"
-          // onChangeText={}
+          onChange={this.handleOnChange}
         />
         
         
