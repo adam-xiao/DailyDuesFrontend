@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
-export default class intialScreen extends Component {
+export default class InitialScreen extends Component {
     
     render(){
 
@@ -20,16 +20,16 @@ export default class intialScreen extends Component {
                 <Text>Daily Dues!</Text>
                 <TextInput
                 name="user"
-                value={this.state.user}
+                // value={this.state.user}
                 placeholder="Username"
-                onChange={this.handleOnChange}
+                // onChange={this.handleOnChange}
                 />
                 <TextInput
                 name="password"
-                value={this.state.password}
+                // value={this.state.password}
                 secureTextEntry={true}
                 placeholder="Password"
-                onChange={this.handleOnChange}
+                // onChange={this.handleOnChange}
                 />
                 
                 

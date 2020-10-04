@@ -1,7 +1,12 @@
+import 'react-native-gesture-handler';
+
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import intialScreen from './src/containers/initialScreen';
+import InitialScreen from './src/containers/InitialScreen'
 
 export default class App extends Component {
 
@@ -68,9 +73,10 @@ export default class App extends Component {
     // });
 
     return (
+      <NavigationContainer>
+        <InitialScreen/>
+      </NavigationContainer>
 
-      <intialScreen />
-      
       // <View style={styles.container}>
       //   <Text>Daily Dues!</Text>
       //   <TextInput
