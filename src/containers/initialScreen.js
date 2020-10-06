@@ -4,6 +4,11 @@ import { StatusBar } from 'expo-status-bar';
 
 export default class InitialScreen extends Component {
     
+    handleOnChange = (event) => {
+        const { target: { name, value } } = event
+        this.setState({ [name]: value })
+    }
+
     render(){
 
         const styles = StyleSheet.create({

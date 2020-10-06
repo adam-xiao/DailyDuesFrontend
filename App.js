@@ -18,12 +18,6 @@ export default class App extends Component {
     password: ""
   }
 
-  handleOnChange = (event) => {
-    const { target: { name, value } } = event
-    this.setState({ [name]: value })
-  }
-
-
   componentDidMount(){
     const token = localStorage.token
 
@@ -74,7 +68,7 @@ export default class App extends Component {
 
     return (
       <NavigationContainer>
-        <InitialScreen/>
+        <InitialScreen user={this.state.user} password={this.state.password} />
       </NavigationContainer>
 
       // <View style={styles.container}>
