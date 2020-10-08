@@ -67,6 +67,7 @@ export default class App extends Component {
     // });
 
     return (
+    //will need more props
       <NavigationContainer>
         <InitialScreen user={this.state.user} password={this.state.password} />
       </NavigationContainer>
