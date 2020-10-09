@@ -1,6 +1,4 @@
 import 'react-native-gesture-handler';
-
-
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React, { Component } from 'react';
@@ -68,6 +66,8 @@ export default class App extends Component {
 
     return (
     //will need more props
+    //Set up diff screens
+    //Pro'll need 3 and some switches in them
       <NavigationContainer>
         <InitialScreen user={this.state.user} password={this.state.password} />
       </NavigationContainer>
