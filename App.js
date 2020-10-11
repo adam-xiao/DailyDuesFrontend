@@ -68,6 +68,7 @@ export default class App extends Component {
     //will need more props
     //Set up diff screens
     //Pro'll need 3 and some switches in them
+    //Init Screen(Auth), Media Screen, Add Media Screen, View currennt/archived screen
       <NavigationContainer>
         <InitialScreen user={this.state.user} password={this.state.password} />
       </NavigationContainer>
